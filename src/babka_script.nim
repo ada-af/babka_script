@@ -3,7 +3,11 @@ import terminal
 import strformat
 
 proc ping(host: string): bool =
-    var cmd = "ping -n 1 -w 2000 " & host
+    var cmd: string
+    if hostOS == "windows":
+        cmd = "ping -n 1 -w 2000 " & host
+    else:
+        cmd = "ping -c 1 " & host
     let (output, exitcode) = execCmdEx(cmd)
     result = not ((bool)exitcode)
 
