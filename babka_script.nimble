@@ -3,7 +3,7 @@
 version       = "0.1.0"
 author        = "mcilya"
 description   = "Package to ping bunch of network resources and say if internet is working"
-license       = "WTFPL"
+license       = "CC0"
 srcDir        = "src"
 bin           = @["babka_script"]
 
