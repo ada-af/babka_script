@@ -26,7 +26,7 @@ for i in hosts:
     else:
         stdout.setForegroundColor(fgRed)
         echo i & ": Ошибка"
-echo ansiResetCode
+stdout.setForegroundColor(fgWhite)
 
 if l == hosts.len:
     stdout.setForegroundColor(fgCyan)
@@ -42,6 +42,6 @@ if l == 0:
     stdout.setForegroundColor(fgRed)
     echo fmt"{l}/{hosts.len} проверок успешны"
     echo "Интернет не работает"
-echo ansiResetCode
+stdout.setForegroundColor(fgWhite)
 echo "Нажмите любую клавишу для продолжения..."
 discard getch()
