@@ -12,6 +12,7 @@ bin           = @["babka_script"]
 
 requires "nim >= 1.6.6"
 
+
 before build:
     switch("d", "release")
     switch("opt", "size")
